@@ -21,7 +21,7 @@ MODULE_DESCRIPTION(DESCRIPTION);
 static int __init printHelloWorld(void){
   //for printing messages is better using printk than printf
   //printk is used in kernel space and printf is used in user space
-  printk(KERN_INFO MESSAGE_HELLO);
+  printk(KERN_DEBUG MESSAGE_HELLO);
   return 0;
 }
 
@@ -30,7 +30,7 @@ static int __init printHelloWorld(void){
  * the function __exit.
  */
 static void __exit cleanHelloWorld(void){
-  printk(KERN_INFO MESSAGE_CLEAN);
+  printk(KERN_DEBUG MESSAGE_CLEAN);
 }
 
 /*
