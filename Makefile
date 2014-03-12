@@ -1,7 +1,9 @@
-obj-m += task01.o
+obj-m := task01.o
+kerneldir := /lib/modules/$(shell uname -r)/build
+pwd := $(shell pwd)
 
 all:
-  make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	make -C $(kerneldir) M=$(pwd) modules
 
 clean:
-  make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	make -C $(kerneldir) M=$(pwd) clean
