@@ -35,6 +35,8 @@ static void __exit cleanHelloWorld(void){
 
 /*
  * Call the modules
+ * insmod->module_init
+ * rmmod->module_exit
  */
 module_init(printHelloWorld);
 module_exit(cleanHelloWorld);
